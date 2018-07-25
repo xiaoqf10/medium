@@ -44,7 +44,7 @@ module.exports = {
       indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : "medium"
     },
     facebook: {
-      appId: process.env.FB_APP_ID ? process.env.FB_APP_ID : ""
+      appId: process.env.FB_APP_ID ? process.env.FB_APP_ID : "1"
     }
   },
   plugins: [
