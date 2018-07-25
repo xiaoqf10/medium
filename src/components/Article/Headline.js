@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Headline = props => {
-  const { title, children, theme } = props;
+  const { title, children, theme, cover } = props;
 
   return (
     <React.Fragment>
+      {cover? <img src={cover}/>: <div/> }
       {title ? <h1>{title}</h1> : <h1>{children}</h1>}
 
       {/* --- STYLES --- */}

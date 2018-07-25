@@ -24,7 +24,7 @@ const Post = props => {
     post: {
       html,
       fields: { prefix, slug },
-      frontmatter: { title, author, category }
+      frontmatter: { title, author, category, cover }
     },
     authornote,
     facebook,
@@ -33,10 +33,12 @@ const Post = props => {
     theme
   } = props;
 
+  console.log('cover--', cover.childImageSharp.resize.src)
+
   return (
     <React.Fragment>
       <header>
-        <Headline title={title} theme={theme} />
+        <Headline title={title} theme={theme} cover={cover.childImageSharp.resize.src}/>
         <Meta prefix={prefix} author={author} category={category} theme={theme} />
       </header>
       <Bodytext html={html} theme={theme} />
