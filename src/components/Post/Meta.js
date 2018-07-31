@@ -3,20 +3,21 @@ import PropTypes from "prop-types";
 import Link from "gatsby-link";
 
 import FaCalendar from "react-icons/lib/fa/calendar";
-import FaUser from "react-icons/lib/fa/user";
+// import FaUser from "react-icons/lib/fa/user";
 import FaTag from "react-icons/lib/fa/tag";
 
 const Meta = props => {
-  const { prefix, author: authorName, category, theme } = props;
+  const { prefix, category, theme } = props;
+  // const { prefix, author: authorName, category, theme } = props;
 
   return (
     <p className="meta">
       <span>
         <FaCalendar size={18} /> {prefix}
       </span>
-      <span>
+      {/*<span>
         <FaUser size={18} /> {authorName}
-      </span>
+      </span>*/}
       {category && (
         <span>
           <FaTag size={18} />
@@ -32,6 +33,8 @@ const Meta = props => {
           font-size: 0.8em;
           margin: ${theme.space.m} 0;
           background: transparent;
+          align-items: right;
+          justify-content: center;
 
           :global(svg) {
             fill: ${theme.icon.color};

@@ -26,7 +26,47 @@ const Item = props => {
 
   return (
     <React.Fragment>
+      {/* code for "Category Page" post */}
+      {/* <li>
+        <Link to={slug} key={slug} className="link">
+          <span className="horizontal-section">
+            <span className="vertical-section1">
+              <h1>
+                {title} <FaArrowRight className="arrow" />
+              </h1>
+              <p className="meta">
+                <span>
+                  <FaCalendar size={18} /> {prefix}
+                </span>
+              </p>
+              <p>{excerpt}</p>
+            </span>
+            <span className="vertical-section2">
+              <Img sizes={sizes} />
+            </span>
+          </span>
+        </Link>
+      </li> */}
+
+      {/* Code for "Blog Page" style posts */}
       <li>
+        <Link to={slug} key={slug} className="link">
+          <span className="horizontal-section">
+            <span className="vertical-section1">
+              <h1>
+                {title} <FaArrowRight className="arrow" />
+              </h1>
+              <Img sizes={sizes} />           
+            </span>
+            <span className="vertical-section2">
+              <p>{excerpt}</p>
+            </span>
+          </span>
+        </Link>
+      </li>
+
+      {/* Original code*/}
+      {/* <li>
         <Link to={slug} key={slug} className="link">
           <Img sizes={sizes} />
           <h1>
@@ -36,9 +76,9 @@ const Item = props => {
             <span>
               <FaCalendar size={18} /> {prefix}
             </span>
-            <span>
+            {/* <span>
               <FaUser size={18} /> {author}
-            </span>
+            </span> *//*}
             {category && (
               <span>
                 <FaTag size={18} /> {category}
@@ -47,13 +87,38 @@ const Item = props => {
           </p>
           <p>{excerpt}</p>
         </Link>
-      </li>
+      </li> */}
 
       {/* --- STYLES --- */}
       <style jsx>{`
         :global(.link) {
           width: 100%;
           color: ${theme.text.color.primary};
+        }
+
+
+        .horizontal-section {
+          display: flex;
+          flex-direction: row;
+          width:100%;
+          flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+        }
+
+        .vertical-section1 {
+          display: flex;
+          flex-direction: column;
+          
+          width:100%;
+          //flex-grow: 2;
+        }
+
+        .vertical-section2 {
+          display: flex;
+          flex-direction: column;
+          width:100%;
+          
+          //flex-grow:1;
+          //align-items: flex-stretch;
         }
 
         li {

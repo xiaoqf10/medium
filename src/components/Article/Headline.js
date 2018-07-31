@@ -6,7 +6,9 @@ const Headline = props => {
 
   return (
     <React.Fragment>
-      {cover? <img src={cover}/>: <div/> }
+      {/* {cover ? <img src={cover} style={{'vertical-align', 'middle'}}/>: <div/> } */}
+      {cover ? <img src={cover} className='headerImage'/>: <div/> }
+      {/* {cover ? <img src={cover}/>: <div/> } */}
       {title ? <h1>{title}</h1> : <h1>{children}</h1>}
 
       {/* --- STYLES --- */}
@@ -30,6 +32,21 @@ const Headline = props => {
             fill: ${theme.color.brand.primary};
           }
         }
+
+        .headerImage {
+          width: 100%;
+          height: 100%;
+          //margin: 0;
+          //vertical-align: middle;
+          //box-sizing: inherit;
+          //border: 0;
+          display: block;
+          margin: 2.5em 0;
+          border-radius: ${theme.size.radius.default};
+          overflow: hidden;
+          //border: 10px solid ${theme.line.color};
+          box-shadow: inset 0px 0px 0px 400px transparent;
+       }
 
         @keyframes headlineEntry {
           from {
