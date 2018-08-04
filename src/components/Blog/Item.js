@@ -109,16 +109,12 @@ const Item = props => {
           flex-direction: column;
           
           width:100%;
-          //flex-grow: 2;
         }
 
         .vertical-section2 {
           display: flex;
           flex-direction: column;
           width:100%;
-          
-          //flex-grow:1;
-          //align-items: flex-stretch;
         }
 
         li {

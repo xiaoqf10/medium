@@ -68,6 +68,9 @@ export const postQuery = graphql`
             resize(width: 300) {
               src
             }
+            original {
+              src
+            }
           }
         }
       }

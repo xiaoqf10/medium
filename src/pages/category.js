@@ -18,6 +18,7 @@ const CategoryPage = props => {
     }
   } = props;
 
+  console.log('posts', posts)
   // Create category list
   const categories = {};
   posts.forEach(edge => {

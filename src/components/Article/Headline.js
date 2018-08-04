@@ -36,15 +36,10 @@ const Headline = props => {
         .headerImage {
           width: 100%;
           height: 100%;
-          //margin: 0;
-          //vertical-align: middle;
-          //box-sizing: inherit;
-          //border: 0;
           display: block;
           margin: 2.5em 0;
           border-radius: ${theme.size.radius.default};
           overflow: hidden;
-          //border: 10px solid ${theme.line.color};
           box-shadow: inset 0px 0px 0px 400px transparent;
        }
 
