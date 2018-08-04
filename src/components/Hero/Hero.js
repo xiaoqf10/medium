@@ -8,30 +8,139 @@ const Hero = props => {
 
   return (
     <React.Fragment>
-      <section className="hero">
+      <section className="homePage vertical-section">
+        <section className="homePageImage">
+        </section>
+
+        <section className="HomePagePostPreviews horizontal-section">
+          <section className="featuredPosts horizontal-section">
+            
+            <section className="featPost vertical-section">
+              <section className="postImage"></section>
+              <h2>Post Title</h2>
+              <h3>Post Date</h3>
+              <text>Post Preview</text>
+            </section>
+
+            <section className="featPost vertical-section">
+              <section className="postImage"></section>
+              <h2>Post Title</h2>
+              <h3>Post Date</h3>
+              <text>Post Preview</text>
+            </section>
+
+            <section className="featPost vertical-section">
+              <section className="postImage"></section>
+              <h2>Post Title</h2>
+              <h3>Post Date</h3>
+              <text>Post Preview</text>
+            </section>
+
+          </section>
+          <section className="popularPosts vertical-section">
+            <h2>最受欢迎的 Posts</h2>
+            
+            <section className="popPost vertical-section">
+              <h2>Post Title</h2>
+              <h3>Post Date</h3>
+              <text>Post Preview</text>
+            </section>
+
+            <section className="popPost vertical-section">
+              <h2>Post Title</h2>
+              <h3>Post Date</h3>
+              <text>Post Preview</text>
+            </section>
+
+            <section className="popPost vertical-section">
+              <h2>Post Title</h2>
+              <h3>Post Date</h3>
+              <text>Post Preview</text>
+            </section>
+
+          </section>
+        </section>
+      </section>
+
+      {/* <section className="hero">
         <h1>
           This is a demo site of&nbsp;the <strong>heroBlog</strong> GatsbyJS starter
         </h1>
         <button onClick={scrollToContent} aria-label="scroll">
           <FaArrowDown />
         </button>
-      </section>
+      </section> */}
 
       {/* --- STYLES --- */}
       <style jsx>{`
-        .hero {
+
+        .horizontal-section {
+          display: flex;
+          flex-direction: row;
+          width:100%;
+        }
+
+        .vertical-section1 {
+          display: flex;
+          flex-direction: column;
+          
+          width:100%;
+        }
+
+        .postImage {
+          background: red;
+          min-height: 100px;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 15px;
+        }
+
+        .featPost {
+          width: 80%;
+          margin: 2%;
+        }
+
+        .popPost {
+          width: 80%;
+          margin: 2%;
+          margin-bottom: 15px;
+        }
+
+        .featuredPosts {
+          background: blue;
+          min-height: 60vh;
+        
+          width: 75%;
+        }
+
+        .popularPosts {
+          background: green;
+          min-height: 60vh;
+         
+          width: 25%;
+        }
+
+        .homePageImage {
           align-items: center;
           background: ${theme.hero.background};
           background-image: url(${backgrounds.mobile});
           background-size: cover;
           color: ${theme.text.color.primary.inverse};
-          display: flex;
-          flex-flow: column nowrap;
           justify-content: center;
-          min-height: 100vh;
+          min-height: 40vh;
           height: 100px;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
+        }
+
+        .homePage {
+          min-height: 100vh;
+          background: red;
+        }
+
+        .hero {
+          min-height: 100vh;
         }
 
         h1 {
